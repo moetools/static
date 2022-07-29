@@ -1,42 +1,44 @@
-/******************* 
+/*******Usage*******
 <script>
-var GAID="G-xxxxxxxx";    // Google Universal Analytics 3 (analytics.js)
-var GTID="G-xxxxxxxx";    // Global site tag (gtag.js) - Google Analytics
-var BAID="xxxxxxxxxx";    // Baidu Analytics ID
-var ASID="xxxxxxxxxx";    // AdSense ID
+var GAID = "G-xxxxxxxx";    // Global site tag (gtag.js) - Google Analytics 4
+var GAID = "UA-xxxxxxx";    // Google Universal Analytics 3 (analytics.js)
+var BAID = "xxxxxxxxxx";    // Baidu Analytics ID
+var ASID = "xxxxxxxxxx";    // AdSense ID
 </script>
+<script src="https://fastly.jsdelivr.net/gh/moetools/static/js/wa.js"></script>
 *******************/
 
-// GA4
-if (typeof GTID !== "undefined") {
-  (function () {
+if (typeof GAID !== "undefined") {
+  // GA4
+  if ( GAID.indexOf("G-") !== -1)
+  {
     var hm = document.createElement("script");
-    hm.src = "https://www.googletagmanager.com/gtag/js?id=" + GTID;
+    hm.src = "https://www.googletagmanager.com/gtag/js?id=" + GAID;
     hm.async = 1;
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
-  })();
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", GTID);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", GAID);
   // GA3
-} else if (typeof GAID !== "undefined") {
+  } else if ( GAID.indexOf("UA-") !== -1) {
     (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-  ga("create", GAID, "auto");
-  ga("send", "pageview");
+    ga("create", GAID, "auto");
+    ga("send", "pageview");
+  }
 }
 
 // Baidu Analytics
