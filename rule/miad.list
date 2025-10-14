@@ -1,0 +1,138 @@
+# MIUI 安装检查
+DOMAIN,api.installer.xiaomi.com
+
+#OneTrack & Analytics & Ad
+DOMAIN,tracking.miui.com
+DOMAIN,data.mistat.xiaomi.com
+DOMAIN,diagnosis.ad.xiaomi.com
+DOMAIN,log.ad.xiaomi.com
+DOMAIN,m.track.ad.xiaomi.com
+DOMAIN,sdkconfig.ad.xiaomi.com
+DOMAIN,api.ad.xiaomi.com
+
+# 小爱同学
+DOMAIN,tracker.ai.xiaomi.com
+DOMAIN,grayconfig.ai.xiaomi.com
+
+# 好像是小米自己的引擎 还在内测
+DOMAIN,mazu.sec.miui.com
+
+# avl & 小米云扫描组件
+DOMAIN,miui-fxcse.avlyun.com
+DOMAIN,sdkconf.avlyun.com
+DOMAIN,miav-cse.avlyun.com
+DOMAIN,tmfsdk.m.qq.com
+DOMAIN,update.avlyun.sec.miui.com
+DOMAIN,ixav-cse.avlyun.com
+DOMAIN,log.avlyun.sec.intl.miui.com
+DOMAIN,logupdate.avlyun.sec.miui.com
+DOMAIN,etl-xlmc-ssl.sandai.net
+DOMAIN,cn.app.chat.xiaomi.net
+
+# 流量更新、病毒白名单
+DOMAIN,api.sec.miui.com
+DOMAIN,adv.sec.miui.com
+DOMAIN,xlmc.sec.miui.com
+
+# 禁用后无法开启部分权限
+#DOMAIN,srv.sec.miui.com
+
+#权限云控 好像只针对部分机型？
+DOMAIN,auth.be.sec.miui.com
+
+#反诈
+DOMAIN,flash.sec.miui.com
+
+#快应用
+DOMAIN,api.hybrid.xiaomi.com
+
+#浏览器 热点下滑等
+DOMAIN,o2o.api.xiaomi.com
+DOMAIN,api.browser.miui.com
+DOMAIN,ssl-cdn.static.browser.mi-img.com
+DOMAIN,security.browser.miui.com
+DOMAIN,hot.browser.miui.com
+DOMAIN,r.browser.miui.com
+DOMAIN,hd.browser.miui.com
+DOMAIN,c3-cache.browser.miui.com
+DOMAIN,api-ipv4.browser.miui.com
+DOMAIN,qsb.browser.miui.com
+DOMAIN,sentry.d.xiaomi.net
+DOMAIN,global-search.browser.miui.com
+DOMAIN,global.search.xiaomi.net
+
+#禁用后可能会导致小米浏览器无法下载APK，因为有垃圾推广安装
+DOMAIN,idm.api.io.mi.com
+DOMAIN,api.jr.mi.com
+
+# 系统应用检查更新 e.g 下载管理
+#DOMAIN,api.developer.xiaomi.com
+#DOMAIN,update.miui.com
+
+# HTML查看器
+DOMAIN,port.sec.miui.com
+
+# 疑似云控
+DOMAIN,qsb.browser.miui.srv
+DOMAIN,rom.pt.miui.srv
+DOMAIN,ccc.sys.miui.com
+DOMAIN,jupiter.sys.miui.com
+DOMAIN,metok.sys.miui.com
+
+# 其他系统应用的垃圾sdk
+# qq扫描 bugly 阅读 快应用等api
+# 可能会影响部分功能 
+DOMAIN,tmfsdk.m.qq.com
+DOMAIN,tmfsdk4.m.qq.com
+DOMAIN,tbm.snssdk.com
+DOMAIN,othstr.beacon.qq.com
+DOMAIN,tools.3g.qq.com
+DOMAIN,tmfsdktcp.m.qq.com
+DOMAIN,h.trace.qq.com
+DOMAIN,hub5pn.wap.sandai.net
+DOMAIN,tpstelemetry.tencent.com
+DOMAIN,pssn.alicdn.com
+DOMAIN,tmfsdktcpv4.m.qq.com
+DOMAIN,tmeadcomm.y.qq.com
+DOMAIN,tangram.e.qq.com
+DOMAIN,us.l.qq.com
+DOMAIN,tdid.m.qq.com
+DOMAIN,h.trace.qq.com
+DOMAIN,api.yky.qq.com
+DOMAIN,sdk.e.qq.com
+DOMAIN,android.bugly.qq.com
+DOMAIN,toblog.ctobsnssdk.com
+DOMAIN,tobapplog.ctobsnssdk.com
+DOMAIN,cfg.imtt.qq.com
+DOMAIN,statres.quickapp.cn
+DOMAIN,qr.quickapp.cn
+DOMAIN,hybrid.xiaomi.com
+DOMAIN,hybrid.miui.com
+DOMAIN,s1.irs03.com
+DOMAIN,up.cm.ksmobile.com
+DOMAIN,dl.cm.ksmobile.com
+DOMAIN,dw-online.ksosoft.com
+DOMAIN,zzhc.vnet.cn
+DOMAIN,beacon-api.aliyuncs.com
+DOMAIN,mpush-api.aliyun.com
+DOMAIN,ug.snssdk.com
+DOMAIN,t7z.cupid.iqiyi.com
+DOMAIN,worldwide.sogou.com
+DOMAIN,www.pangolin-dsp-toutiao.com
+DOMAIN,master.wap.dphub.sandai.net
+DOMAIN,hub5u.wap.sandai.net
+DOMAIN,idx.m.hub.sandai.net
+DOMAIN,tw13b093.sandai.net
+DOMAIN,adinfo.ra1.xlmc.sec.miui.com
+DOMAIN,test.ad.xiaomi.com
+DOMAIN,uploadlog.xlmc.sandai.net
+DOMAIN,t03-api.xlmc.xunlei.com
+DOMAIN,pre.api.tw06.xlmc.sandai.net
+DOMAIN,guid-xldw-ssl.n0808.com
+
+# Unknown
+DOMAIN,data.sec.miui.com
+
+# Xiaomi音乐广告
+DOMAIN,pgdt.gtimg.cn
+DOMAIN-SUFFIX,rdt.tfogc.com
