@@ -1,0 +1,21 @@
+# Anytype Telemetry
+DOMAIN,sentry.anytype.io,REJECT
+DOMAIN,graylog.anytype.io,REJECT
+DOMAIN,telemetry.anytype.io,REJECT
+
+# Bilibli PCDN
+DOMAIN-WILDCARD,*pcdn*.biliapi.net,REJECT
+DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
+DOMAIN-SUFFIX,szbdyd.com,REJECT
+
+# Tencent
+DOMAIN,wup.imtt.qq.com,REJECT
+DOMAIN,qbwup.imtt.qq.com,REJECT
+
+# Soul
+DOMAIN,ad-r.soulapp.cn,REJECT
+
+# Keep
+DOMAIN,kad.gotokeep.com,REJECT
+DOMAIN,apm.gotokeep.com,REJECT
+DOMAIN,hc-ssp.sm.cn,REJECT
