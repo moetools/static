@@ -27,5 +27,11 @@ dns:
 {% endif %}
 proxies: ~
 proxy-groups: ~
-rule-providers: ~
+rule-providers:
+  antiad:
+    type: http
+    url: https://anti-ad.net/mihomo.mrs
+    format: mrs
+    interval: 604800
+    behavior: domain
 rules: ~
