@@ -1,0 +1,222 @@
+mixed-port: {{ default(global.clash.http_port, "7897") }}
+allow-lan: {{ default(global.clash.allow_lan, "true") }}
+mode: rule
+log-level: {{ default(global.clash.log_level, "info") }}
+external-controller: {{ default(global.clash.external_controller, "127.0.0.1:9090") }}
+profile:
+  store-selected: true
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip-only-cn-private.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-only-cn-private.mmdb"
+  asn: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
+{% if default(request.clash.dns, "true") == "true" %}
+dns:
+  enable: true
+  listen: :1053
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - https://120.53.53.53/dns-query
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - '*.lan'
+    - '*.local'
+{% endif %}
+proxies: ~
+proxy-groups: ~
+rule-providers:
+  lancidr:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yml
+    format: yaml
+    interval: 604800
+    behavior: ipcidr # domain/ipcidr/classical
+    # proxy: DIRECT
+    # size-limit: 0
+  private:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yml
+    format: yaml
+    interval: 604800
+    behavior: domain
+  unban:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/UnBan.list"
+    path: ./ruleset/unban.list
+    format: text
+    interval: 604800
+    behavior: classical
+  myunban:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/moetools/static@master/rule/myunban.list"
+    path: ./ruleset/myban.list
+    format: text
+    interval: 604800
+    behavior: classical
+  myban:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/moetools/static@master/rule/myban.list"
+    path: ./ruleset/myban.list
+    format: text
+    interval: 604800
+    behavior: classical
+  miad:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/moetools/static@master/rule/miad.list"
+    path: ./ruleset/miad.list
+    format: text
+    interval: 604800
+    behavior: classical
+  osupdate:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/moetools/static@master/rule/osupdate.list"
+    path: ./ruleset/osupdate.list
+    format: text
+    interval: 604800
+    behavior: classical
+  banad:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanAD.list"
+    path: ./ruleset/banad.list
+    format: text
+    interval: 604800
+    behavior: classical
+{% if default(request.meta.antiad, "false") == "true" %}
+  antiad:
+    type: http
+    url: https://anti-ad.net/mihomo.mrs
+    format: mrs
+    interval: 604800
+    behavior: domain
+{% endif %}
+  chinamedia:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaMedia.list"
+    path: ./ruleset/chinamedia.list
+    format: text
+    interval: 604800
+    behavior: classical
+  chinadomain:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/chinadomain.yml
+    format: yaml
+    interval: 604800
+    behavior: domain
+  steamcn:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/SteamCN.list"
+    path: ./ruleset/steamcn.list
+    format: text
+    interval: 604800
+    behavior: classical
+  googlecn:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/GoogleCN.list"
+    path: ./ruleset/googlecn.list
+    format: text
+    interval: 604800
+    behavior: classical
+  microsoft:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Microsoft.list"
+    path: ./ruleset/microsoft.list
+    format: text
+    interval: 604800
+    behavior: classical
+  apple:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Apple.list"
+    path: ./ruleset/apple.list
+    format: text
+    interval: 604800
+    behavior: domain
+  googlefcm:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/GoogleFCM.list"
+    path: ./ruleset/googlefcm.list
+    format: text
+    interval: 604800
+    behavior: classical
+  aiplatform:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/AI.list"
+    path: ./ruleset/aiplatform.list
+    format: text
+    interval: 604800
+    behavior: classical
+  proxymedia:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyMedia.list"
+    path: ./ruleset/proxymedia.list
+    format: text
+    interval: 604800
+    behavior: classical
+  telegram:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Telegram.list"
+    path: ./ruleset/telegram.list
+    format: text
+    interval: 604800
+    behavior: classical
+  gfwlist:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfwlist.yml
+    format: yaml
+    interval: 604800
+    behavior: domain
+  neteasemusic:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/NetEaseMusic.list"
+    path: ./ruleset/neteasemusic.list
+    format: text
+    interval: 604800
+    behavior: classical
+  download:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Download.list"
+    path: ./ruleset/download.list
+    format: text
+    interval: 604800
+    behavior: classical
+  chinaidc:
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaCompanyIp.list"
+    path: ./ruleset/chinaidc.list
+    format: text
+    interval: 604800
+    behavior: classical
+rules:
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,unban,国内直连
+  - RULE-SET,myunban,国内直连
+  - RULE-SET,myban,拦截屏蔽
+  - RULE-SET,banad,拦截屏蔽
+{% if default(request.meta.antiad, "false") == "true" %}
+  - RULE-SET,antiad,拦截屏蔽
+{% endif %}
+  - RULE-SET,miad,拦截屏蔽
+  - RULE-SET,osupdate,系统更新
+  - RULE-SET,chinamedia,国内媒体
+  - RULE-SET,neteasemusic,网易音乐
+  - RULE-SET,chinadomain,国内直连
+  - RULE-SET,steamcn,国内直连
+  - RULE-SET,googlecn,国内直连
+  - RULE-SET,microsoft,微软服务
+  - RULE-SET,apple,苹果服务
+  - RULE-SET,googlefcm,谷歌推送
+  - RULE-SET,aiplatform,AI平台
+  - RULE-SET,proxymedia,国外媒体
+  - RULE-SET,telegram,国外媒体
+  - RULE-SET,gfwlist,国外网站
+  - RULE-SET,download,国内直连
+  - RULE-SET,chinaidc,国内直连
+  - GEOIP,CN,国内直连
+  - MATCH,漏网之鱼

@@ -30,7 +30,7 @@ DOMAIN,etl-xlmc-ssl.sandai.net
 DOMAIN,cn.app.chat.xiaomi.net
 
 # 流量更新、病毒白名单
-DOMAIN,api.sec.miui.com
+#DOMAIN,api.sec.miui.com
 DOMAIN,adv.sec.miui.com
 DOMAIN,xlmc.sec.miui.com
 
@@ -81,7 +81,7 @@ DOMAIN,metok.sys.miui.com
 
 # 其他系统应用的垃圾sdk
 # qq扫描 bugly 阅读 快应用等api
-# 可能会影响部分功能 
+# 可能会影响部分功能
 DOMAIN,tmfsdk.m.qq.com
 DOMAIN,tmfsdk4.m.qq.com
 DOMAIN,tbm.snssdk.com
