@@ -3,14 +3,16 @@ allow-lan: {{ default(global.clash.allow_lan, "true") }}
 mode: rule
 log-level: {{ default(global.clash.log_level, "info") }}
 external-controller: {{ default(global.clash.external_controller, "127.0.0.1:9090") }}
-{% if default(request.clash.dns, "true") == "true" %}
 profile:
   store-selected: true
+  store-fake-ip: true
+global-client-fingerprint: random
 geox-url:
   geoip: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip-only-cn-private.dat"
   geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-only-cn-private.mmdb"
   asn: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
+{% if default(request.clash.dns, "true") == "true" %}
 dns:
   enable: true
   listen: :1053
