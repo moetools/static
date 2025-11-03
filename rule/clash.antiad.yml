@@ -26,6 +26,7 @@ dns:
   fake-ip-filter:
     - '*.lan'
     - '*.local'
+    - 'rule-set:fakeipfilter'
 {% endif %}
 proxies: ~
 proxy-groups: ~
@@ -33,6 +34,12 @@ rule-providers:
   antiad:
     type: http
     url: https://anti-ad.net/mihomo.mrs
+    format: mrs
+    interval: 604800
+    behavior: domain
+  fakeipfilter:
+    type: http
+    url: https://fastly.jsdelivr.net/gh/QuixoticHeart/rule-set@ruleset/meta/domain/fake-ip-filter.mrs
     format: mrs
     interval: 604800
     behavior: domain
