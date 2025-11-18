@@ -62,7 +62,7 @@ DOMAIN,global-search.browser.miui.com
 DOMAIN,global.search.xiaomi.net
 
 #禁用后可能会导致小米浏览器无法下载APK，因为有垃圾推广安装
-DOMAIN,idm.api.io.mi.com
+#DOMAIN,idm.api.io.mi.com
 DOMAIN,api.jr.mi.com
 
 # 系统应用检查更新 e.g 下载管理
@@ -131,7 +131,7 @@ DOMAIN,pre.api.tw06.xlmc.sandai.net
 DOMAIN,guid-xldw-ssl.n0808.com
 
 # Unknown
-DOMAIN,data.sec.miui.com
+#DOMAIN,data.sec.miui.com
 
 # Xiaomi音乐广告
 DOMAIN,pgdt.gtimg.cn
