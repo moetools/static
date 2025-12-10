@@ -1,3 +1,6 @@
+# DM Reg (Privacy)
+DOMAIN,a.fxltsbl.com,REJECT
+
 # Anytype Telemetry
 DOMAIN,sentry.anytype.io,REJECT
 DOMAIN,graylog.anytype.io,REJECT
@@ -5,7 +8,7 @@ DOMAIN,telemetry.anytype.io,REJECT
 
 # Bilibli PCDN
 #DOMAIN-WILDCARD,*pcdn*.biliapi.net,REJECT
-DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
+#DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
 DOMAIN-SUFFIX,szbdyd.com,REJECT
 
 # Tencent
