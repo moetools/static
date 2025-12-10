@@ -67,10 +67,10 @@ rule-providers:
     format: text
     interval: 604800
     behavior: classical
-  miad:
+  mobileprivacy:
     type: http
-    url: "https://fastly.jsdelivr.net/gh/moetools/static@master/rule/miad.list"
-    path: ./ruleset/miad.list
+    url: "https://fastly.jsdelivr.net/gh/moetools/static@master/rule/mobileprivacy.list"
+    path: ./ruleset/mobileprivacy.list
     format: text
     interval: 604800
     behavior: classical
@@ -204,7 +204,7 @@ rules:
 {% if default(request.meta.antiad, "false") == "true" %}
   - RULE-SET,antiad,拦截屏蔽
 {% endif %}
-  - RULE-SET,miad,拦截屏蔽
+  - RULE-SET,mobileprivacy,拦截屏蔽
   - RULE-SET,osupdate,系统更新
   - RULE-SET,chinamedia,国内媒体
   - RULE-SET,neteasemusic,网易音乐
