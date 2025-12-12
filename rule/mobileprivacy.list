@@ -1,18 +1,18 @@
 # Vivo
-vhs.wwstat.com.eo.unicomcdn.com.cn
-adxlog-adnet.vivo.com.cn
-az.appstore.vivo.com.cn
-appstore-trace-h5sdk.vivo.com.cn
-dsplog-adnet.vivo.com.cn
-trace-h5sdk.vivo.com.cn
-tracking-adnet.vivo.com.cn
-vhs.wwstat.com.ctdns.cn
-trackercollect.ddxq.mobi
-trackerfeed.ddxq.mobi
-vhs.wwstat.com.eo.dnse0.com
-ads-api.vivo.com
-h4g3z1-native.vivo.web.app
-vhs.wwstat.com
+DOMAIN,vhs.wwstat.com.eo.unicomcdn.com.cn
+DOMAIN,adxlog-adnet.vivo.com.cn
+DOMAIN,az.appstore.vivo.com.cn
+DOMAIN,appstore-trace-h5sdk.vivo.com.cn
+DOMAIN,dsplog-adnet.vivo.com.cn
+DOMAIN,trace-h5sdk.vivo.com.cn
+DOMAIN,tracking-adnet.vivo.com.cn
+DOMAIN,vhs.wwstat.com.ctdns.cn
+DOMAIN,trackercollect.ddxq.mobi
+DOMAIN,trackerfeed.ddxq.mobi
+DOMAIN,vhs.wwstat.com.eo.dnse0.com
+DOMAIN,ads-api.vivo.com
+DOMAIN,h4g3z1-native.vivo.web.app
+DOMAIN,vhs.wwstat.com
 
 # MIUI 安装检查
 DOMAIN,api.installer.xiaomi.com
