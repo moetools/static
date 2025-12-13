@@ -6,3 +6,5 @@ DOMAIN,mars.jd.com
 # Vivo Space
 DOMAIN,zhan.vivo.com.cn
 DOMAIN,h5.vivo.com.cn
+# Private Domain
+DOMAIN-SUFFIX,intra.hicasper.com

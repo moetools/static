@@ -35,12 +35,11 @@ rule-providers:
     type: http
     url: https://anti-ad.net/mihomo.mrs
     format: mrs
-    interval: 604800
+    interval: 1209600
     behavior: domain
   fakeipfilter:
     type: http
-    url: https://fastly.jsdelivr.net/gh/QuixoticHeart/rule-set@ruleset/meta/domain/fake-ip-filter.mrs
+    url: https://fastly.jsdelivr.net/gh/moetools/static@master/rule/fakeipfilter.mrs
     format: mrs
-    interval: 604800
     behavior: domain
 rules: ~
