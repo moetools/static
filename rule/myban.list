@@ -22,3 +22,6 @@ DOMAIN,ad-r.soulapp.cn,REJECT
 DOMAIN,kad.gotokeep.com,REJECT
 DOMAIN,apm.gotokeep.com,REJECT
 DOMAIN,hc-ssp.sm.cn,REJECT
+
+# JD
+DOMAIN,anti-sdk-report.m.jd.com,REJECT
