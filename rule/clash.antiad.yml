@@ -33,7 +33,7 @@ proxy-groups: ~
 rule-providers:
   antiad:
     type: http
-    url: https://anti-ad.net/mihomo.mrs
+    url: https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs
     format: mrs
     interval: 1209600
     behavior: domain
