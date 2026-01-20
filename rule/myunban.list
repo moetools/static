@@ -8,3 +8,6 @@ DOMAIN,zhan.vivo.com.cn
 DOMAIN,h5.vivo.com.cn
 # Private Domain
 DOMAIN-SUFFIX,intra.hicasper.com
+# Unblock Ads
+PROCESS-NAME,info.muge.appshare,DIRECT
+#PROCESS-NAME,com.coolapk.market,DIRECT
