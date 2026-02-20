@@ -6,6 +6,9 @@ DOMAIN,knicks.jd.com
 # Vivo Space
 DOMAIN,zhan.vivo.com.cn
 DOMAIN,h5.vivo.com.cn
+# Novel
+DOMAIN-SUFFIX,aaacs.cc,DIRECT
+DOMAIN-SUFFIX,aaawz.cc,DIRECT
 # Private Domain
 DOMAIN-SUFFIX,intra.hicasper.com
 # Unblock Ads
