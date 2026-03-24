@@ -13,4 +13,4 @@ DOMAIN-SUFFIX,aaawz.cc,DIRECT
 DOMAIN-SUFFIX,intra.hicasper.com
 # Unblock Ads
 PROCESS-NAME,info.muge.appshare,DIRECT
-#PROCESS-NAME,com.coolapk.market,DIRECT
+PROCESS-NAME,com.coolapk.market,DIRECT
