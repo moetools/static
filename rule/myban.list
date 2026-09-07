@@ -25,3 +25,7 @@ DOMAIN,hc-ssp.sm.cn,REJECT
 
 # JD
 DOMAIN,anti-sdk-report.m.jd.com,REJECT
+
+# Software Update
+DOMAIN,update.9mod.com,REJECT
+DOMAIN,remote.oneseeker.top,REJECT
