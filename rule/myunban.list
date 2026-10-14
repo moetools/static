@@ -1,16 +1,23 @@
+# Private Domain
+DOMAIN-SUFFIX,local
+DOMAIN-SUFFIX,lan
+DOMAIN-SUFFIX,intra.hicasper.com
+# HuggingFace Mirror
+DOMAIN-SUFFIX,hf-mirror.com,DIRECT
 # 淘宝闪购白屏加载
-DOMAIN,h-adashx.ut.taobao.com
-DOMAIN,app-monitor.ele.me
+#DOMAIN,h-adashx.ut.taobao.com
+#DOMAIN,app-monitor.ele.me
 # JD
 DOMAIN,mars.jd.com
 # Vivo Space
-DOMAIN,zhan.vivo.com.cn
-DOMAIN,h5.vivo.com.cn
+#DOMAIN,zhan.vivo.com.cn
+#DOMAIN,h5.vivo.com.cn
+# P2P
+DOMAIN-SUFFIX, snapdrop.net
+DOMAIN-SUFFIX, pairdrop.net
 # Novel
 DOMAIN-SUFFIX,aaacs.cc,DIRECT
 DOMAIN-SUFFIX,aaawz.cc,DIRECT
-# Private Domain
-DOMAIN-SUFFIX,intra.hicasper.com
 # Unblock Ads
 PROCESS-NAME,info.muge.appshare,DIRECT
 PROCESS-NAME,com.coolapk.market,DIRECT

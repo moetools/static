@@ -11,6 +11,13 @@ DOMAIN,telemetry.anytype.io,REJECT
 #DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
 DOMAIN-SUFFIX,szbdyd.com,REJECT
 
+# Chelaile
+DOMAIN,atrace.chelaile.net.cn,REJECT
+DOMAIN,logs.chelaile.net.cn,REJECT
+
+# Cherry Studio
+DOMAIN,analytics.cherry-ai.com,REJECT
+
 # Tencent
 DOMAIN,wup.imtt.qq.com,REJECT
 DOMAIN,qbwup.imtt.qq.com,REJECT
@@ -29,3 +36,4 @@ DOMAIN,anti-sdk-report.m.jd.com,REJECT
 # Software Update
 DOMAIN,update.9mod.com,REJECT
 DOMAIN,remote.oneseeker.top,REJECT
+DOMAIN,osx.telegram.org,REJECT
