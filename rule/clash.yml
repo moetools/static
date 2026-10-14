@@ -6,7 +6,6 @@ external-controller: {{ default(global.clash.external_controller, "127.0.0.1:909
 profile:
   store-selected: true
   store-fake-ip: true
-global-client-fingerprint: random
 geox-url:
   geoip: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip-only-cn-private.dat"
   geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
@@ -28,6 +27,17 @@ dns:
     - '*.local'
     - 'rule-set:fakeipfilter'
 {% endif %}
+sniffer:
+    enable: true
+    sniff:
+      HTTP:
+        ports: [80,8000,8080,8888]
+        override-destination: true
+      TLS:
+        ports: [443,4443,8443]
+        override-destination: true
+    skip-domain: ['Mijia Cloud', dlg.io.mi.com]
+    parse-pure-ip: false
 proxies: ~
 proxy-groups: ~
 rule-providers:
