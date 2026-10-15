@@ -3,7 +3,7 @@ DOMAIN-SUFFIX,local
 DOMAIN-SUFFIX,lan
 DOMAIN-SUFFIX,intra.hicasper.com
 # HuggingFace Mirror
-DOMAIN-SUFFIX,hf-mirror.com,DIRECT
+DOMAIN-SUFFIX,hf-mirror.com
 # 淘宝闪购白屏加载
 #DOMAIN,h-adashx.ut.taobao.com
 #DOMAIN,app-monitor.ele.me
@@ -16,8 +16,8 @@ DOMAIN,mars.jd.com
 DOMAIN-SUFFIX, snapdrop.net
 DOMAIN-SUFFIX, pairdrop.net
 # Novel
-DOMAIN-SUFFIX,aaacs.cc,DIRECT
-DOMAIN-SUFFIX,aaawz.cc,DIRECT
+DOMAIN-SUFFIX,aaacs.cc
+DOMAIN-SUFFIX,aaawz.cc
 # Unblock Ads
-PROCESS-NAME,info.muge.appshare,DIRECT
-PROCESS-NAME,com.coolapk.market,DIRECT
+PROCESS-NAME,info.muge.appshare
+PROCESS-NAME,com.coolapk.market

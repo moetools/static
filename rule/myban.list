@@ -1,39 +1,39 @@
 # DM Reg (Privacy)
-DOMAIN,a.fxltsbl.com,REJECT
+DOMAIN,a.fxltsbl.com
 
 # Anytype Telemetry
-DOMAIN,sentry.anytype.io,REJECT
-DOMAIN,graylog.anytype.io,REJECT
-DOMAIN,telemetry.anytype.io,REJECT
+DOMAIN,sentry.anytype.io
+DOMAIN,graylog.anytype.io
+DOMAIN,telemetry.anytype.io
 
 # Bilibli PCDN
-#DOMAIN-WILDCARD,*pcdn*.biliapi.net,REJECT
-#DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
-DOMAIN-SUFFIX,szbdyd.com,REJECT
+#DOMAIN-WILDCARD,*pcdn*.biliapi.net
+#DOMAIN-SUFFIX,mcdn.bilivideo.cn
+DOMAIN-SUFFIX,szbdyd.com
 
 # Chelaile
-DOMAIN,atrace.chelaile.net.cn,REJECT
-DOMAIN,logs.chelaile.net.cn,REJECT
+DOMAIN,atrace.chelaile.net.cn
+DOMAIN,logs.chelaile.net.cn
 
 # Cherry Studio
-DOMAIN,analytics.cherry-ai.com,REJECT
+DOMAIN,analytics.cherry-ai.com
 
 # Tencent
-DOMAIN,wup.imtt.qq.com,REJECT
-DOMAIN,qbwup.imtt.qq.com,REJECT
+DOMAIN,wup.imtt.qq.com
+DOMAIN,qbwup.imtt.qq.com
 
 # Soul
-DOMAIN,ad-r.soulapp.cn,REJECT
+DOMAIN,ad-r.soulapp.cn
 
 # Keep
-DOMAIN,kad.gotokeep.com,REJECT
-DOMAIN,apm.gotokeep.com,REJECT
-DOMAIN,hc-ssp.sm.cn,REJECT
+DOMAIN,kad.gotokeep.com
+DOMAIN,apm.gotokeep.com
+DOMAIN,hc-ssp.sm.cn
 
 # JD
-DOMAIN,anti-sdk-report.m.jd.com,REJECT
+DOMAIN,anti-sdk-report.m.jd.com
 
 # Software Update
-DOMAIN,update.9mod.com,REJECT
-DOMAIN,remote.oneseeker.top,REJECT
-DOMAIN,osx.telegram.org,REJECT
+DOMAIN,update.9mod.com
+DOMAIN,remote.oneseeker.top
+DOMAIN,osx.telegram.org
