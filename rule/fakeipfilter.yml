@@ -24,16 +24,12 @@ payload:
   - "time3.*.com"
   - "time4.*.com"
   - "time5.*.com"
-  - "time6.*.com"
-  - "time7.*.com"
   - "ntp.*.com"
   - "ntp1.*.com"
   - "ntp2.*.com"
   - "ntp3.*.com"
   - "ntp4.*.com"
   - "ntp5.*.com"
-  - "ntp6.*.com"
-  - "ntp7.*.com"
   - "*.time.edu.cn"
   - "*.ntp.org.cn"
   - "+.pool.ntp.org"
@@ -68,7 +64,6 @@ payload:
 
   # APPLE
 
-
   # NINTENDO
   - "+.srv.nintendo.net"
   - "*.n.n.srv.nintendo.net"
@@ -85,53 +80,13 @@ payload:
   # PLEX
   - "+.plex.direct"
 
-  # NETFLIX
-  - "+.nflxvideo.net"
-
   # BILIBILI
   - "*.mcdn.bilivideo.cn"
 
-  # NETEASE
-  - "music.163.com"
-  - "*.music.163.com"
-  - "*.126.net"
-
   # TENCENT
-  - "y.qq.com"
-  - "*.y.qq.com"
-  - "streamoc.music.tc.qq.com"
-  - "mobileoc.music.tc.qq.com"
-  - "isure.stream.qqmusic.qq.com"
-  - "dl.stream.qqmusic.qq.com"
-  - "aqqmusic.tc.qq.com"
-  - "amobile.music.tc.qq.com"
   - "localhost.ptlogin2.qq.com"
   - "localhost.sec.qq.com"
   - "localhost.*.weixin.qq.com"
-
-  # JD
-  - "*.jd.com"
-  - "*.m.jd.com"
-
-  # CHINA MOBILE / MIGU
-  - "*.music.migu.cn"
-  - "music.migu.cn"
-
-  # BAIDU / QIANQIAN MUSIC
-  - "musicapi.taihe.com"
-  - "music.taihe.com" #
-
-  # KUGOU MUSIC
-  - "songsearch.kugou.com"
-  - "trackercdn.kugou.com"
-
-  # KUWO MUSIC
-  - "*.kuwo.cn"
-
-  # JOOX MUSIC
-  - "api-jooxtt.sanook.com"
-  - "api.joox.com"
-  - "joox.com"
 
   # THUNDER
   - "+.sandai.net"

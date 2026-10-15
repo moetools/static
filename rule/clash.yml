@@ -3,6 +3,7 @@ allow-lan: {{ default(global.clash.allow_lan, "true") }}
 mode: rule
 log-level: {{ default(global.clash.log_level, "info") }}
 external-controller: {{ default(global.clash.external_controller, "127.0.0.1:9090") }}
+unified-delay: true
 profile:
   store-selected: true
   store-fake-ip: true
@@ -14,18 +15,76 @@ geox-url:
 {% if default(request.clash.dns, "true") == "true" %}
 dns:
   enable: true
-  listen: :1053
   default-nameserver:
     - 223.5.5.5
-    - 119.29.29.29
+    - 8.8.8.8
   nameserver:
     - https://223.5.5.5/dns-query
     - https://120.53.53.53/dns-query
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - '*.lan'
-    - '*.local'
-    - 'rule-set:fakeipfilter'
+    - '*'
+    - '.test'
+    - '.example'
+    - '.invalid'
+    - '.lan'
+    - '.local'
+    - '.localhost'
+    - '.localdomain'
+    - '+.home.arpa'
+    - '.direct'
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time.*.edu.cn'
+    - 'time.*.apple.com'
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'ntp.*.com'
+    - 'ntp1.*.com'
+    - 'ntp2.*.com'
+    - 'ntp3.*.com'
+    - 'ntp4.*.com'
+    - 'ntp5.*.com'
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - '+.pool.ntp.org'
+    - 'time1.cloud.tencent.com'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - '+.wotgame.cn'
+    - '+.wggames.cn'
+    - '+.wowsgame.cn'
+    - '+.wargaming.net'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.square-enix.com'
+    - 'proxy.golang.org'
+    - 'lens.l.google.com'
+    - 'stun.l.google.com'
+    - 'na.b.g-tun.com'
+    - '+.srv.nintendo.net'
+    - '*.n.n.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - 'xbox.*.*.microsoft.com'
+    - '*.*.xboxlive.com'
+    - '+.msftncsi.com'
+    - '+.msftconnecttest.com'
+    - '+.plex.direct'
+    - '*.mcdn.bilivideo.cn'
+    - 'localhost.ptlogin2.qq.com'
+    - 'localhost.sec.qq.com'
+    - 'localhost.*.weixin.qq.com'
+    - '+.sandai.net'
+    - '+.3gppnetwork.org'
+    - '+.pub.3gppnetwork.org'
+    - '+.ts.net'
+    - '+.turn.twilio.com'
+    - '*.intra.hicasper.com'
 {% endif %}
 sniffer:
     enable: true
@@ -41,9 +100,60 @@ sniffer:
 proxies: ~
 proxy-groups: ~
 rule-providers:
-  fakeipfilter:
+  antiad:
     type: http
-    url: https://fastly.jsdelivr.net/gh/moetools/static@master/rule/fakeipfilter.mrs
+    url: https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs
     format: mrs
+    path: ./ruleset/antiad.mrs
+    interval: 1209600
     behavior: domain
+  private:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/CRThu/clash-rules-mrs@release/loyalsoldier/private.mrs"
+    path: ./ruleset/private.mrs
+    interval: 1209600
+  googlecn:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/CRThu/clash-rules-mrs@release/loyalsoldier/google.mrs"
+    path: ./ruleset/googlecn.mrs
+    interval: 1209600
+  gaming:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/moetools/static@master/rule/gaming.mrs"
+    path: ./ruleset/gaming.mrs
+    interval: 1209600
+  proxymedia:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/moetools/static@master/rule/proxymedia.mrs"
+    path: ./ruleset/proxymedia.mrs
+    interval: 1209600
+  gfw:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/CRThu/clash-rules-mrs@release/loyalsoldier/gfw.mrs"
+    path: ./ruleset/gfw.mrs
+    interval: 1209600
+  cndirect:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/CRThu/clash-rules-mrs@release/loyalsoldier/cndirect.mrs"
+    path: ./ruleset/cndirect.mrs
+    interval: 1209600
+  chinaidc:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/moetools/static@master/rule/chinaidc.mrs"
+    path: ./ruleset/chinaidc.mrs
+    interval: 1209600
 rules: ~
