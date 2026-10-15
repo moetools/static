@@ -7,11 +7,12 @@ unified-delay: true
 profile:
   store-selected: true
   store-fake-ip: true
+geodata-mode: true
 geox-url:
   geoip: "https://gcore.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip-only-cn-private.dat"
   geosite: "https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://gcore.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-only-cn-private.mmdb"
-  asn: "https://gcore.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
+  # mmdb: "https://gcore.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-only-cn-private.mmdb"
+  # asn: "https://gcore.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
 {% if default(request.clash.dns, "true") == "true" %}
 dns:
   enable: true
@@ -107,26 +108,12 @@ rule-providers:
     path: ./ruleset/antiad.mrs
     interval: 1209600
     behavior: domain
-  private:
+  mobileprivacy:
     type: http
     behavior: domain
     format: mrs
-    url: "https://gcore.jsdelivr.net/gh/CRThu/clash-rules-mrs@release/loyalsoldier/private.mrs"
-    path: ./ruleset/private.mrs
-    interval: 1209600
-  googlecn:
-    type: http
-    behavior: domain
-    format: mrs
-    url: "https://gcore.jsdelivr.net/gh/CRThu/clash-rules-mrs@release/loyalsoldier/google.mrs"
-    path: ./ruleset/googlecn.mrs
-    interval: 1209600
-  gaming:
-    type: http
-    behavior: domain
-    format: mrs
-    url: "https://gcore.jsdelivr.net/gh/moetools/static@master/rule/gaming.mrs"
-    path: ./ruleset/gaming.mrs
+    url: "https://gcore.jsdelivr.net/gh/moetools/static@master/rule/mobileprivacy.mrs"
+    path: ./ruleset/mobileprivacy.mrs
     interval: 1209600
   proxymedia:
     type: http
@@ -134,20 +121,6 @@ rule-providers:
     format: mrs
     url: "https://gcore.jsdelivr.net/gh/moetools/static@master/rule/proxymedia.mrs"
     path: ./ruleset/proxymedia.mrs
-    interval: 1209600
-  gfw:
-    type: http
-    behavior: domain
-    format: mrs
-    url: "https://gcore.jsdelivr.net/gh/CRThu/clash-rules-mrs@release/loyalsoldier/gfw.mrs"
-    path: ./ruleset/gfw.mrs
-    interval: 1209600
-  cndirect:
-    type: http
-    behavior: domain
-    format: mrs
-    url: "https://gcore.jsdelivr.net/gh/CRThu/clash-rules-mrs@release/loyalsoldier/cndirect.mrs"
-    path: ./ruleset/cndirect.mrs
     interval: 1209600
   chinaidc:
     type: http

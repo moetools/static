@@ -42,10 +42,10 @@ payload:
   - "+.stun.*.*.*.*.*"
 
   # ROUTERS (GENERIC)
-  # - "*.linksys.com"
-  # - "*.linksyssmartwifi.com"
-  # - "*.router.asus.com"
-  # - "heartbeat.belkin.com"
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - "heartbeat.belkin.com"
 
   # GAMES (GENERIC)
   - "+.wotgame.cn"
