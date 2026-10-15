@@ -5,7 +5,7 @@ var GAID = "UA-xxxxxxx";    // Google Universal Analytics 3 (analytics.js)
 var BAID = "xxxxxxxxxx";    // Baidu Analytics ID
 var ASID = "xxxxxxxxxx";    // AdSense ID
 </script>
-<script src="https://fastly.jsdelivr.net/gh/moetools/static/js/wa.js"></script>
+<script src="https://gcore.jsdelivr.net/gh/moetools/static/js/wa.js"></script>
 *******************/
 
 if (typeof GAID !== "undefined") {

@@ -7,10 +7,10 @@ profile:
   store-selected: true
   store-fake-ip: true
 geox-url:
-  geoip: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip-only-cn-private.dat"
-  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-only-cn-private.mmdb"
-  asn: "https://fastly.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
+  geoip: "https://gcore.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip-only-cn-private.dat"
+  geosite: "https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://gcore.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-only-cn-private.mmdb"
+  asn: "https://gcore.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
 {% if default(request.clash.dns, "true") == "true" %}
 dns:
   enable: true
@@ -43,13 +43,13 @@ proxy-groups: ~
 rule-providers:
   antiad:
     type: http
-    url: https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs
+    url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs
     format: mrs
     interval: 1209600
     behavior: domain
   fakeipfilter:
     type: http
-    url: https://fastly.jsdelivr.net/gh/moetools/static@master/rule/fakeipfilter.mrs
+    url: https://gcore.jsdelivr.net/gh/moetools/static@master/rule/fakeipfilter.mrs
     format: mrs
     behavior: domain
 rules: ~
